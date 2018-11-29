@@ -1,4 +1,5 @@
 #One way of doing the problem: 
+Fibonacci sequence: (0,1,1,2,3,5,8,13,21,34,55.....)
 
 # def Fibonacci(n): 
       
@@ -22,18 +23,21 @@
       
 # print(Fibonacci(10))
 
-#Solution using recursion: 
+# Solution using recursion: 
 
-def Fibonacci(n): 
-    if n<0: 
-        print("Must use a positive number.") 
-    # First Fibonacci number is 0 
-    elif n==0: 
-        return 0
-    # Second Fibonacci number is 1 
-    elif n==1: 
-        return 1
-    else: 
-        return Fibonacci(n-1)+Fibonacci(n-2)
+# def Fibonacci(n): 
+#     if n<0: 
+#         print("Must use a positive number.") 
 
-print(Fibonacci(6)) 
+#     # The first Fib number is 0 
+#     elif n==0: 
+#         return 0
+
+#     # The second Fib number is 1 
+#     elif n==1: 
+#         return 1
+
+#     else: 
+#         return Fibonacci(n-1)+Fibonacci(n-2)
+
+# print(Fibonacci(6)) 
