@@ -1,11 +1,11 @@
-#One way of doing the problem: 
-Fibonacci sequence: (0,1,1,2,3,5,8,13,21,34,55.....)
+# Algo for Fibonacci : 
+# Fibonacci sequence: (0,1,1,2,3,5,8,13,21,34,55.....)
 
+#One way of doing the problem: 
 # def Fibonacci(n): 
       
 #     # Taking 1st two fibonacci nubers as 0 and 1 
-#     FibArr = [0, 1] 
-      
+#     FibArr = [0, 1]
 #     while len(FibArr) < n + 1:  
 #         FibArr.append(0)  
       
@@ -24,16 +24,15 @@ Fibonacci sequence: (0,1,1,2,3,5,8,13,21,34,55.....)
 # print(Fibonacci(10))
 
 # Solution using recursion: 
-
 # def Fibonacci(n): 
 #     if n<0: 
 #         print("Must use a positive number.") 
 
-#     # The first Fib number is 0 
+#     # The first Fib number (n) is 0 
 #     elif n==0: 
 #         return 0
 
-#     # The second Fib number is 1 
+#     # The second Fib number (n) is 1 
 #     elif n==1: 
 #         return 1
 
@@ -41,3 +40,19 @@ Fibonacci sequence: (0,1,1,2,3,5,8,13,21,34,55.....)
 #         return Fibonacci(n-1)+Fibonacci(n-2)
 
 # print(Fibonacci(6)) 
+
+##### Algo for valid parentheses: 
+
+class Solution:
+    def isValid(self, given):
+        parenDict = {"(": ")", "[": "]",  "{": "}"}
+        openparens = set(["(", "[", "{"])
+        arr = []
+        for i in given:
+            if i in openparens:
+                arr.append(i)
+            elif arr and i == parenDict[arr[-1]]:
+                arr.pop()
+            else:
+                return False
+        return arr == []
